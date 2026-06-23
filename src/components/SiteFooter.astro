@@ -1,0 +1,48 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const isActive = (href: string) => {
+  const normalized = href.replace(/\/$/, '') || '/';
+  return path === normalized;
+};
+---
+
+<footer class="bg-dark-900 px-6 py-8 text-center">
+  <p class="text-white/30 text-xs leading-7">
+    Kicktemp GmbH · Hamburg<br />
+    <a href="mailto:praxismarketing@kicktemp.com" class="text-white/50 hover:text-white/70 transition-colors">
+      praxismarketing@kicktemp.com
+    </a>
+  </p>
+  <div class="mt-3 flex justify-center gap-5 text-xs">
+    <a
+      href="/impressum"
+      class:list={[
+        'transition-colors',
+        isActive('/impressum')
+          ? 'text-blue font-semibold underline underline-offset-2'
+          : 'text-white/25 hover:text-white/50',
+      ]}
+    >
+      Impressum
+    </a>
+    <a
+      href="/datenschutz"
+      class:list={[
+        'transition-colors',
+        isActive('/datenschutz')
+          ? 'text-blue font-semibold underline underline-offset-2'
+          : 'text-white/25 hover:text-white/50',
+      ]}
+    >
+      Datenschutz
+    </a>
+    <button
+      type="button"
+      onclick="CookieConsent.showPreferences()"
+      class="hover:text-white/50 transition-colors cursor-pointer bg-transparent border-0 p-0 text-xs text-white/25 font-normal"
+    >
+      Cookie-Einstellungen
+    </button>
+  </div>
+</footer>

@@ -1,0 +1,256 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+---
+
+<BaseLayout
+  title="Datenschutzerklärung"
+  description="Datenschutzerklärung der Kicktemp GmbH"
+  robots="noindex, nofollow"
+>
+  <SiteNav />
+
+  <div class="max-w-2xl mx-auto px-6 py-16">
+    <h1 class="text-3xl font-black text-dark mb-2">Datenschutzerklärung</h1>
+    <p class="text-gray-500 text-sm mb-10">Stand: Juni 2025</p>
+
+    <div class="space-y-10 text-gray-700 text-sm leading-relaxed">
+
+      <section>
+        <h2 class="text-dark font-bold text-lg mb-3">1. Datenschutz auf einen Blick</h2>
+        <h3 class="text-dark font-semibold mb-2">Allgemeine Hinweise</h3>
+        <p>
+          Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+          personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene
+          Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+        </p>
+        <h3 class="text-dark font-semibold mt-4 mb-2">Datenerfassung auf dieser Website</h3>
+        <p>
+          Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber
+          (Kicktemp GmbH, Kontaktdaten siehe Abschnitt 3). Ihre Daten werden zum einen
+          dadurch erhoben, dass Sie uns diese mitteilen (z.&nbsp;B. per E-Mail oder WhatsApp).
+          Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website
+          durch unsere IT-Systeme erfasst (z.&nbsp;B. technische Daten wie Browser, Betriebssystem,
+          Uhrzeit des Seitenaufrufs).
+        </p>
+        <h3 class="text-dark font-semibold mt-4 mb-2">Ihre Rechte</h3>
+        <p>
+          Sie haben jederzeit das Recht auf Auskunft über Herkunft, Empfänger und Zweck Ihrer
+          gespeicherten personenbezogenen Daten sowie das Recht auf Berichtigung oder Löschung.
+          Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese
+          jederzeit für die Zukunft widerrufen. Hierzu sowie zu weiteren Fragen wenden Sie sich
+          jederzeit an <a href="mailto:hello@kicktemp.com" class="text-blue hover:underline">hello@kicktemp.com</a>.
+        </p>
+        <h3 class="text-dark font-semibold mt-4 mb-2">Analyse-Tools</h3>
+        <p>
+          Beim Besuch dieser Website kann Ihr Surf-Verhalten mit Ihrer Einwilligung statistisch
+          ausgewertet werden. Details finden Sie in Abschnitt 5.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-dark font-bold text-lg mb-3">2. Hosting (GitHub Pages)</h2>
+        <p>
+          Diese Website wird über <strong>GitHub Pages</strong> (GitHub, Inc., 88 Colin P Kelly Jr St,
+          San Francisco, CA 94107, USA) gehostet. Beim Aufruf der Website werden technisch
+          bedingt IP-Adressen und Verbindungsdaten an GitHub übermittelt und in Server-Log-Dateien
+          gespeichert (Browsertyp, Browserversion, Betriebssystem, Referrer URL, Hostname,
+          Uhrzeit, IP-Adresse).
+        </p>
+        <p class="mt-3">
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren
+          und effizienten Betrieb der Website). Die Datenübertragung in die USA erfolgt auf
+          Grundlage der EU-Standardvertragsklauseln. Weitere Informationen:
+          <a href="https://docs.github.com/de/site-policy/privacy-policies/github-privacy-statement"
+             target="_blank" rel="noopener noreferrer" class="text-blue hover:underline">
+            GitHub Privacy Statement
+          </a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-dark font-bold text-lg mb-3">3. Hinweis zur verantwortlichen Stelle</h2>
+        <p>
+          Kicktemp GmbH<br />
+          Jungfernstieg 7<br />
+          D-20354 Hamburg<br /><br />
+          Telefon: +49 40 6094 3030-0<br />
+          E-Mail: <a href="mailto:hello@kicktemp.com" class="text-blue hover:underline">hello@kicktemp.com</a>
+        </p>
+        <p class="mt-3">
+          Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder
+          gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen
+          Daten entscheidet.
+        </p>
+        <h3 class="text-dark font-semibold mt-4 mb-2">Speicherdauer</h3>
+        <p>
+          Soweit keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen
+          Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein
+          berechtigtes Löschersuchen geltend machen oder eine Einwilligung widerrufen, werden
+          Ihre Daten gelöscht, sofern keine anderen rechtlich zulässigen Gründe entgegenstehen
+          (z.&nbsp;B. steuer- oder handelsrechtliche Aufbewahrungsfristen).
+        </p>
+        <h3 class="text-dark font-semibold mt-4 mb-2">SSL-/TLS-Verschlüsselung</h3>
+        <p>
+          Diese Seite nutzt aus Sicherheitsgründen eine SSL- bzw. TLS-Verschlüsselung. Sie
+          erkennen dies am „https://" in der Adresszeile sowie dem Schloss-Symbol im Browser.
+        </p>
+        <h3 class="text-dark font-semibold mt-4 mb-2">Widerspruch gegen Werbe-E-Mails</h3>
+        <p>
+          Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur
+          Übersendung von nicht ausdrücklich angeforderter Werbung wird hiermit widersprochen.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-dark font-bold text-lg mb-3">4. Datenerfassung auf dieser Website</h2>
+
+        <h3 class="text-dark font-semibold mb-2">Cookies &amp; Einwilligung</h3>
+        <p>
+          Unsere Website verwendet Cookies. Cookies sind kleine Datenpakete, die auf Ihrem
+          Endgerät gespeichert werden. Technisch notwendige Cookies werden auf Grundlage von
+          Art. 6 Abs. 1 lit. f DSGVO gesetzt. Für alle anderen Cookies (Analyse, Marketing)
+          holen wir Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG
+          ein. Die Einwilligung ist jederzeit widerrufbar (
+          <button
+            type="button"
+            onclick="CookieConsent.showPreferences()"
+            class="text-blue hover:underline cursor-pointer bg-transparent border-0 p-0 text-sm"
+          >
+            Cookie-Einstellungen öffnen
+          </button>).
+        </p>
+        <p class="mt-3">
+          Wir setzen zur Verwaltung der Einwilligungen die Consent-Technologie
+          <strong>vanilla-cookieconsent</strong> ein. Sie ist vollständig lokal in unserer
+          Website integriert und überträgt keine Daten an externe Anbieter.
+        </p>
+
+        <h3 class="text-dark font-semibold mt-4 mb-2">Kontaktaufnahme per E-Mail oder WhatsApp</h3>
+        <p>
+          Wenn Sie uns per E-Mail oder WhatsApp kontaktieren, werden die übermittelten Daten
+          (Name, E-Mail-Adresse, Telefonnummer, Nachrichteninhalt) zur Bearbeitung Ihrer Anfrage
+          gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+        </p>
+        <p class="mt-3">
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1
+          lit. f DSGVO (berechtigtes Interesse). Die Daten werden nach Abschluss des Vorgangs
+          gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-dark font-bold text-lg mb-3">5. Analyse-Tools und Werbung</h2>
+
+        <h3 class="text-dark font-semibold mb-2">Google Tag Manager</h3>
+        <p>
+          Wir setzen den Google Tag Manager ein. Anbieter ist die Google Ireland Limited,
+          Gordon House, Barrow Street, Dublin 4, Irland. Der Google Tag Manager selbst erstellt
+          keine Nutzerprofile, speichert keine Cookies und nimmt keine eigenständigen Analysen vor.
+          Er dient lediglich der Verwaltung der über ihn eingebundenen Tools.
+        </p>
+        <p class="mt-3">
+          Wir betreiben den Google Tag Manager über einen eigenen <strong>Server-Side
+          Container</strong> (SST) auf einem Server in der EU. Dadurch werden Daten erst
+          anonymisiert, bevor sie an Google-Server weitergeleitet werden. Rechtsgrundlage:
+          Art. 6 Abs. 1 lit. f DSGVO. Soweit eine Einwilligung abgefragt wurde, erfolgt die
+          Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG.
+        </p>
+
+        <h3 class="text-dark font-semibold mt-4 mb-2">Google Analytics 4</h3>
+        <p>
+          Mit Ihrer Einwilligung nutzen wir Google Analytics 4. Anbieter: Google Ireland
+          Limited, Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics ermöglicht
+          es dem Websitebetreiber, das Verhalten der Websitebesucher zu analysieren
+          (Seitenaufrufe, Verweildauer, Betriebssysteme, Herkunft).
+        </p>
+        <p class="mt-3">
+          Die Daten werden <strong>nicht direkt an Google gesendet</strong>, sondern laufen
+          über unseren Server-Side GTM-Container, der IP-Adressen anonymisiert, bevor sie
+          weitergeleitet werden.
+        </p>
+        <p class="mt-3">
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Die Einwilligung ist
+          jederzeit widerrufbar. Speicherdauer: bis zu 14 Monate. Die Datenübertragung in die
+          USA erfolgt auf Grundlage der EU-Standardvertragsklauseln. Details:
+          <a href="https://business.safety.google/adscontrollerterms/sccs/"
+             target="_blank" rel="noopener noreferrer" class="text-blue hover:underline">
+            business.safety.google
+          </a>.
+          Google ist nach dem EU-US Data Privacy Framework (DPF) zertifiziert:
+          <a href="https://www.dataprivacyframework.gov/participant/5780"
+             target="_blank" rel="noopener noreferrer" class="text-blue hover:underline">
+            dataprivacyframework.gov
+          </a>.
+          Weitere Informationen:
+          <a href="https://support.google.com/analytics/answer/6004245?hl=de"
+             target="_blank" rel="noopener noreferrer" class="text-blue hover:underline">
+            Google Analytics Datenschutz
+          </a>.
+        </p>
+
+        <h3 class="text-dark font-semibold mt-4 mb-2">Meta-Pixel (ehemals Facebook Pixel)</h3>
+        <p>
+          Mit Ihrer Einwilligung nutzen wir zur Konversionsmessung den Besucheraktions-Pixel
+          von Meta. Anbieter: Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin 2,
+          Irland. Über das Pixel kann das Verhalten der Seitenbesucher nachverfolgt werden,
+          nachdem diese durch Klick auf eine Meta-Werbeanzeige auf unsere Seite weitergeleitet
+          wurden.
+        </p>
+        <p class="mt-3">
+          Auch hier laufen die Daten über unseren Server-Side GTM-Container und werden
+          anonymisiert weitergeleitet.
+        </p>
+        <p class="mt-3">
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Meta ist nach dem
+          EU-US Data Privacy Framework (DPF) zertifiziert:
+          <a href="https://www.dataprivacyframework.gov/participant/4452"
+             target="_blank" rel="noopener noreferrer" class="text-blue hover:underline">
+            dataprivacyframework.gov
+          </a>.
+          Datenschutzerklärung Meta:
+          <a href="https://de-de.facebook.com/about/privacy/"
+             target="_blank" rel="noopener noreferrer" class="text-blue hover:underline">
+            de-de.facebook.com/about/privacy
+          </a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-dark font-bold text-lg mb-3">6. Ihre Rechte</h2>
+        <p>Sie haben das Recht auf:</p>
+        <ul class="list-disc list-inside mt-2 space-y-1">
+          <li>Auskunft über Ihre gespeicherten Daten (Art. 15 DSGVO)</li>
+          <li>Berichtigung unrichtiger Daten (Art. 16 DSGVO)</li>
+          <li>Löschung Ihrer Daten (Art. 17 DSGVO)</li>
+          <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+          <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+          <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+          <li>Widerruf einer erteilten Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
+        </ul>
+        <p class="mt-4">
+          Für Anfragen:
+          <a href="mailto:hello@kicktemp.com" class="text-blue hover:underline">hello@kicktemp.com</a>
+        </p>
+        <p class="mt-3">
+          Beschwerderecht bei der Aufsichtsbehörde:<br />
+          Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit,
+          Ludwig-Erhard-Str. 22, 20459 Hamburg.
+        </p>
+        <h3 class="text-dark font-semibold mt-4 mb-2">Widerspruchsrecht (Art. 21 DSGVO)</h3>
+        <p class="uppercase text-xs leading-relaxed">
+          Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO
+          erfolgt, haben Sie jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen
+          Situation ergeben, gegen die Verarbeitung Widerspruch einzulegen. Dies gilt auch für
+          ein auf diese Bestimmungen gestütztes Profiling.
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <SiteFooter />
+  <CookieConsent />
+</BaseLayout>

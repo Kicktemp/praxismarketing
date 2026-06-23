@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteNav from '../components/SiteNav.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 ---
 
 <BaseLayout
@@ -7,57 +9,64 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Wir übernehmen alles Digitale für ästhetische Kliniken und Praxen – Website, Technik, Werbung und Auswertung. Aus einer Hand."
 >
 
-  <!-- ── NAV ───────────────────────────────────── -->
-  <nav class="sticky top-0 z-50 bg-dark flex items-center justify-between px-6 h-14 shadow-lg">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1205.9 240" class="h-5 w-auto">
-      <defs><style>.l1{fill:#fff}.l2{fill:#009fe3}</style></defs>
-      <path class="l2" d="M204.9,186.1l-18.3-19.9v-92.7L106.5,27l-17.1,10v151.2l-30.2-17.4V23.8L95.7,2.6c6.8-3.4,14.8-3.4,21.6,0l84.9,49.3c5.9,3.4,10.8,11.9,10.8,18.8v98.6c0,5.8-3.5,12.8-8.1,16.8ZM126.5,120l39.9-43.3-25.4-14.7-51.6,58,60.4,67.8-43.3,25.2-80.1-46.5v-93l19.4-11.2v-30.7l-7.1,4.1-27.9,16.2c-5.9,3.4-10.8,11.9-10.8,18.8v98.6c0,6.9,4.8,15.3,10.8,18.8l84.9,49.3c6.8,3.4,14.8,3.4,21.6,0l76.5-44.4-67.3-73Z"/>
-      <path class="l1" d="M271.5,76.7h17.3v88.9h-17.3v-88.9ZM289.8,120l34.5-43.3h20.2l-35.2,43.3,38.5,45.6h-21.8l-36.2-45.6Z"/>
-      <path class="l1" d="M403.3,76.7h17.3v88.9h-17.3v-88.9Z"/>
-      <path class="l1" d="M551.9,143.1l7.6,13.6c-8.6,6.9-20.3,10.8-33.2,10.8-29.6,0-47.1-20.4-47.1-46.4s17.5-46.3,47.1-46.3,24.5,4.1,33.2,10.8l-7.6,13.7c-7.3-5.6-16.3-8.6-25.5-8.5-18.3,0-29.6,13.7-29.6,30.3s11.4,30.4,29.6,30.4,18.8-3.1,25.5-8.4Z"/>
-      <path class="l1" d="M618.8,76.7h17.3v88.9h-17.3v-88.9ZM637.1,120l34.5-43.3h20.2l-35.2,43.3,38.5,45.6h-21.8l-36.2-45.6Z"/>
-      <path class="l1" d="M819.2,92.3h-26.4v73.3h-17.3v-73.3h-26.4v-15.6h70.1v15.6Z"/>
-      <path class="l1" d="M937.6,165.6h-60.6v-52.8h59.9v15.2h-42.7v22.4h43.3v15.3ZM877,92v-15.3h59.9v15.3h-59.9Z"/>
-      <path class="l1" d="M1038.5,118.6l26.5-41.8h16.8v88.8h-16v-64.3l-23.9,38h-6.9l-23.8-38v64.3h-16v-88.8h16.8l26.5,41.8Z"/>
-      <path class="l1" d="M1156.9,165.6h-17.3v-88.9h35.7c18.7,0,30.6,12.8,30.6,29.2s-12.6,29.1-30.6,29.1h-18.4v30.6ZM1156.9,92.3v27.1h17.2c9.3,0,14.5-5.7,14.5-13.6s-5.2-13.5-14.5-13.5h-17.2Z"/>
-    </svg>
-    <a
-      href="#kontakt"
-      class="bg-blue text-white text-sm font-bold px-4 py-2 rounded-md hover:bg-blue-dark transition-colors"
-    >
-      Gespräch anfragen
-    </a>
-  </nav>
+  <SiteNav />
 
   <!-- ── HERO ──────────────────────────────────── -->
-  <section class="bg-dark px-6 py-16 text-center">
-    <span class="inline-block bg-blue/15 text-blue text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-7">
-      Für Kliniken &amp; Praxen
-    </span>
-    <h1 class="text-white font-black text-4xl sm:text-5xl leading-tight tracking-tight mb-4">
-      Alles Digitale.<br />
-      <span class="text-blue">Aus einer Hand.</span>
-    </h1>
-    <p class="text-white/65 text-base leading-relaxed max-w-md mx-auto mt-5 mb-10">
-      Wir übernehmen alles Digitale für ästhetische Kliniken und Praxen —
-      <strong class="text-white/90 font-semibold">Website, Technik, Werbung und Auswertung.</strong>
-    </p>
-    <div class="flex flex-wrap gap-3 justify-center">
-      <a
-        href="#leistungen"
-        class="inline-flex items-center gap-2 bg-blue text-white font-bold text-sm px-7 py-3.5 rounded-lg hover:bg-blue-dark transition-colors"
-      >
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        Was wir machen
-      </a>
-      <a
-        href="#kontakt"
-        class="inline-flex items-center gap-2 bg-white/8 border border-white/15 text-white/85 font-semibold text-sm px-7 py-3.5 rounded-lg hover:bg-white/12 transition-colors"
-      >
-        Jetzt anfragen
-      </a>
+  <section class="relative px-6 py-20 text-center overflow-hidden min-h-[420px] flex flex-col justify-center">
+    <!-- Background photo -->
+    <div
+      class="absolute inset-0 bg-cover bg-top bg-no-repeat"
+      style="background-image: url('/team/team-hero.jpg')"
+    ></div>
+    <!-- Dark overlay -->
+    <div class="absolute inset-0" style="background: rgba(0,0,0,0.35)"></div>
+    <!-- Content -->
+    <div class="relative z-10">
+      <span class="inline-block bg-white/15 text-white text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-7 border border-white/25">
+        Für Kliniken &amp; Praxen
+      </span>
+      <h1 class="text-white font-black text-4xl sm:text-5xl leading-tight tracking-tight mb-4">
+        Alles Digitale.<br />
+        <span class="text-blue">Aus einer Hand.</span>
+      </h1>
+      <p class="text-white/70 text-base leading-relaxed max-w-md mx-auto mt-5 mb-10">
+        Wir übernehmen alles Digitale für ästhetische Kliniken und Praxen —
+        <strong class="text-white/95 font-semibold">Website, Technik, Werbung und Auswertung.</strong>
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a
+          href="#leistungen"
+          class="inline-flex items-center gap-2 bg-blue text-white font-bold text-sm px-7 py-3.5 rounded-lg hover:bg-blue-dark transition-colors"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          Was wir machen
+        </a>
+        <a
+          href="#kontakt"
+          class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white/90 font-semibold text-sm px-7 py-3.5 rounded-lg hover:bg-white/15 transition-colors"
+        >
+          Jetzt anfragen
+        </a>
+      </div>
     </div>
   </section>
+
+  <!-- ── STATS BAR ────────────────────────────── -->
+  <div class="bg-dark border-t border-white/8 px-6 py-5">
+    <div class="max-w-lg mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3 text-center">
+      {[
+        { value: 'Ø 64x', label: 'ROAS Google Ads' },
+        { value: '€ 22', label: 'Ø Cost per Lead' },
+        { value: '8+', label: 'Jahre Kicktemp' },
+        { value: '100%', label: 'Fokus auf Medizin' },
+      ].map((s) => (
+        <div>
+          <div class="text-white font-black text-xl leading-none">{s.value}</div>
+          <div class="text-white/40 text-xs mt-1">{s.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
 
   <!-- ── THREE PILLARS ─────────────────────────── -->
   <section class="bg-blue px-6 py-10">
@@ -114,7 +123,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         {
           icon: `<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>`,
           title: 'Kliniksoftware-Anbindung',
-          text: 'Direkte Integration mit Ihrer Praxis- und Kliniksoftware',
+          text: 'Direkte Integration mit mobi.MED, Claysen und weiteren Praxis-CRM-Systemen',
         },
         {
           icon: `<path d="M3 11l19-9-9 19-2-8-8-2z"/>`,
@@ -199,6 +208,112 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- ── REFERENCES ───────────────────────────── -->
+  <section class="bg-dark px-6 py-16">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-blue text-xs font-bold tracking-widest uppercase mb-3 text-center">Referenzen</p>
+      <h2 class="text-white font-extrabold text-2xl sm:text-3xl tracking-tight mb-10 text-center">
+        Kliniken, die uns vertrauen
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+        <!-- Praxisklinik Rosengarten -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue/40 transition-colors">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-blue/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-blue" viewBox="0 0 24 24" fill="none" stroke="#009fe3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div>
+              <h3 class="text-white font-bold text-sm">Praxisklinik Rosengarten</h3>
+              <p class="text-white/40 text-xs">Ästhetische &amp; Plastische Chirurgie</p>
+            </div>
+          </div>
+          <div class="space-y-2 mb-4">
+            <div class="flex justify-between text-xs">
+              <span class="text-white/50">Google Ads ROAS</span>
+              <span class="text-white font-semibold">Ø 64x</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-white/50">Cost per Lead</span>
+              <span class="text-white font-semibold">€ 22</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-white/50">CRM-Integration</span>
+              <span class="text-white font-semibold">mobi.MED</span>
+            </div>
+          </div>
+          <p class="text-white/40 text-xs leading-relaxed italic">
+            „Seit der Zusammenarbeit mit Kicktemp haben wir volle Transparenz über unsere Marketingmaßnahmen."
+          </p>
+        </div>
+
+        <!-- s-thetic -->
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-blue/40 transition-colors">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-blue/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="#009fe3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-white font-bold text-sm">s-thetic Klinik</h3>
+              <p class="text-white/40 text-xs">Ästhetische Chirurgie · Mehrere Standorte</p>
+            </div>
+          </div>
+          <div class="space-y-2 mb-4">
+            <div class="flex justify-between text-xs">
+              <span class="text-white/50">Leistungen</span>
+              <span class="text-white font-semibold">Website · Ads · Technik</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-white/50">CRM-Integration</span>
+              <span class="text-white font-semibold">Claysen</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-white/50">Standorte</span>
+              <span class="text-white font-semibold">DACH-Region</span>
+            </div>
+          </div>
+          <p class="text-white/40 text-xs leading-relaxed italic">
+            „Kicktemp versteht die besonderen Anforderungen ästhetischer Kliniken wie kein anderer Dienstleister."
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEAM ──────────────────────────────────── -->
+  <section class="px-6 py-16 max-w-2xl mx-auto">
+    <p class="text-blue text-xs font-bold tracking-widest uppercase mb-3 text-center">Das Team</p>
+    <h2 class="text-dark font-extrabold text-2xl sm:text-3xl tracking-tight mb-3 text-center">
+      Menschen, nicht Maschinen
+    </h2>
+    <p class="text-gray-500 text-sm text-center max-w-sm mx-auto mb-10">
+      Bei Kicktemp arbeiten Sie immer mit denselben Personen — kein Callcenter, kein ständiger Wechsel.
+    </p>
+
+    <div class="grid grid-cols-3 gap-6 mb-10">
+      {[
+        { name: 'Jenny Nübel', role: 'Gesellschafterin · Vertrieb & Kundenbetreuung', img: '/team/jenny.jpg' },
+        { name: 'Niels Nübel', role: 'Geschäftsführer · Strategie & Technik', img: '/team/niels.jpg' },
+        { name: 'Stefan Wendhausen', role: 'Geschäftsführer · Hosting & Infrastruktur', img: '/team/stefan.jpg' },
+      ].map((p) => (
+        <div class="text-center">
+          <div class="w-full aspect-square rounded-2xl overflow-hidden bg-gray-100 mb-4 shadow-md">
+            <img
+              src={p.img}
+              alt={p.name}
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="text-dark font-bold text-sm leading-snug">{p.name}</h3>
+          <p class="text-gray-400 text-xs mt-1 leading-snug">{p.role}</p>
+        </div>
+      ))}
+    </div>
+
+  </section>
+
   <!-- ── CTA ───────────────────────────────────── -->
   <section class="bg-blue px-6 py-16 text-center" id="kontakt">
     <h2 class="text-white font-black text-3xl sm:text-4xl leading-tight tracking-tight mb-4">
@@ -208,42 +323,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       Sprechen Sie mit uns. Kein Verkaufsgespräch — wir schauen ehrlich,
       ob und wie wir helfen können.
     </p>
-    <div class="flex flex-col items-center gap-3">
+    <div class="flex flex-col items-center gap-3 w-full max-w-sm mx-auto">
+
+      <!-- Termin buchen (Google Calendar) — primary CTA -->
       <a
-        href="mailto:niels@kicktemp.com"
-        class="inline-flex items-center justify-center gap-2.5 bg-white text-dark font-bold text-sm px-7 py-3.5 rounded-lg w-64 hover:-translate-y-0.5 transition-transform"
-        onclick="gtag && gtag('event', 'click_email', { event_category: 'cta' })"
+        href="https://calendar.google.com/calendar/appointments/XXXXXXXXXXXXXXXX"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2.5 bg-white text-dark font-bold text-sm px-7 py-3.5 rounded-lg w-full hover:-translate-y-0.5 transition-transform"
+        onclick="gtag && gtag('event', 'click_calendar', { event_category: 'cta' })"
       >
-        <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        niels@kicktemp.com
+        <!-- Calendar icon -->
+        <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Termin buchen
       </a>
+
+      <!-- Telefon (Sipgate) -->
+      <a
+        href="tel:+4940XXXXXXXX"
+        class="inline-flex items-center justify-center gap-2.5 bg-white/20 border border-white/30 text-white font-bold text-sm px-7 py-3.5 rounded-lg w-full hover:bg-white/30 transition-colors"
+        onclick="gtag && gtag('event', 'click_phone', { event_category: 'cta' })"
+      >
+        <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.29 6.29l1.46-1.46a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +49 40 XX XXXXXXXX <!-- BITTE ERGÄNZEN -->
+      </a>
+
+      <!-- WhatsApp -->
       <a
         href="https://wa.me/49XXXXXXXXXX"
-        class="inline-flex items-center justify-center gap-2.5 bg-[#25D366] text-white font-bold text-sm px-7 py-3.5 rounded-lg w-64 hover:-translate-y-0.5 transition-transform"
+        class="inline-flex items-center justify-center gap-2.5 bg-white/20 border border-white/30 text-white font-bold text-sm px-7 py-3.5 rounded-lg w-full hover:bg-white/30 transition-colors"
         onclick="gtag && gtag('event', 'click_whatsapp', { event_category: 'cta' })"
       >
         <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp schreiben
       </a>
+
+      <!-- E-Mail -->
       <a
-        href="https://kicktemp.com"
-        class="inline-flex items-center justify-center gap-2.5 bg-white/15 border border-white/25 text-white font-semibold text-sm px-7 py-3.5 rounded-lg w-64 hover:bg-white/20 transition-colors"
+        href="mailto:praxismarketing@kicktemp.com"
+        class="inline-flex items-center justify-center gap-2.5 bg-white/10 border border-white/20 text-white/80 font-semibold text-sm px-7 py-3.5 rounded-lg w-full hover:bg-white/15 transition-colors"
+        onclick="gtag && gtag('event', 'click_email', { event_category: 'cta' })"
       >
-        <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        kicktemp.com
+        <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        praxismarketing@kicktemp.com
       </a>
+
     </div>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────────── -->
-  <footer class="bg-dark-900 px-6 py-6 text-center">
-    <p class="text-white/30 text-xs leading-7">
-      Kicktemp GmbH · Hamburg<br />
-      <a href="mailto:niels@kicktemp.com" class="text-white/50 hover:text-white/70 transition-colors">
-        niels@kicktemp.com
-      </a>
-    </p>
-  </footer>
+  <SiteFooter />
 
   <!-- Sticky CTA (mobile only) -->
   <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark px-4 py-3 border-t border-white/8 sm:hidden">
