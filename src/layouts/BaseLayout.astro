@@ -1,0 +1,108 @@
+---
+import '@fontsource-variable/inter';
+import { SEO } from 'astro-seo';
+import CookieConsent from '../components/CookieConsent.astro';
+import { seoConfig, generateCanonical } from '../config/seo';
+
+// GTM & SST Config — replace with your actual IDs
+const GTM_ID = 'GTM-XXXXXXX';
+const SST_URL = 'https://sst.kicktemp.com'; // Your server-side GTM endpoint
+
+export interface Props {
+  title?: string;
+  description?: string;
+  path?: string;
+  robots?: string;
+}
+
+const {
+  title,
+  description = seoConfig.defaultDescription,
+  path = '',
+  robots,
+} = Astro.props;
+
+const metaTitle = title
+  ? `${title} | Kicktemp`
+  : seoConfig.siteName;
+const canonical = generateCanonical(path);
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#2d2929" />
+
+    <SEO
+      title={metaTitle}
+      description={description}
+      openGraph={{
+        basic: {
+          title: metaTitle,
+          type: 'website',
+          image: seoConfig.defaultOgImage,
+          url: canonical,
+        },
+        optional: { description },
+      }}
+      extend={{
+        meta: [
+          { name: 'og:locale', content: seoConfig.locale },
+          ...(robots ? [{ name: 'robots', content: robots }] : []),
+        ],
+        link: [
+          { rel: 'canonical', href: canonical },
+        ],
+      }}
+    />
+
+    <!-- Consent Default (Google Consent Mode v2) — must fire before GTM -->
+    <script is:inline define:vars={{ GTM_ID, SST_URL }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+      });
+
+      // GTM via Server-Side endpoint
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = SST_URL + '/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', GTM_ID);
+    </script>
+  </head>
+
+  <body class="bg-white text-dark antialiased">
+    <!-- GTM noscript fallback -->
+    <noscript>
+      <iframe
+        src={`${SST_URL}/ns.html?id=${GTM_ID}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe>
+    </noscript>
+
+    <slot />
+    <CookieConsent />
+  </body>
+</html>
+
+<style is:global>
+  html { scroll-behavior: smooth; }
+  * { box-sizing: border-box; }
+</style>

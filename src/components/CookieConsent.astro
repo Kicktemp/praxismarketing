@@ -1,0 +1,150 @@
+---
+import 'vanilla-cookieconsent/dist/cookieconsent.css';
+---
+
+<script>
+  import * as CookieConsent from 'vanilla-cookieconsent';
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+
+  const updateGtagConsent = () => {
+    const categories = CookieConsent.getUserPreferences().acceptedCategories;
+    // @ts-ignore
+    window.gtag('consent', 'update', {
+      analytics_storage: categories.includes('analytics') ? 'granted' : 'denied',
+      ad_storage: categories.includes('advertisement') ? 'granted' : 'denied',
+      ad_user_data: categories.includes('advertisement') ? 'granted' : 'denied',
+      ad_personalization: categories.includes('advertisement') ? 'granted' : 'denied',
+    });
+  };
+
+  CookieConsent.run({
+    autoShow: false,
+    guiOptions: {
+      consentModal: {
+        layout: 'box wide',
+        position: 'bottom right',
+        equalWeightButtons: true,
+      },
+      preferencesModal: {
+        layout: 'bar wide',
+        position: 'right',
+        equalWeightButtons: true,
+      },
+    },
+    onFirstConsent: () => { updateGtagConsent(); },
+    onConsent: () => { updateGtagConsent(); },
+    onChange: () => { updateGtagConsent(); },
+
+    categories: {
+      necessary: { readOnly: true, enabled: true },
+      analytics: {
+        enabled: false,
+        services: {
+          ga4: {
+            label: 'Google Analytics 4 (Server-Side)',
+            cookies: [{ name: /^_ga/ }],
+          },
+        },
+      },
+      advertisement: {
+        enabled: false,
+        services: {
+          google_ads: { label: 'Google Ads' },
+          meta: { label: 'Meta Ads & Conversions API' },
+        },
+      },
+    },
+
+    language: {
+      default: 'de',
+      translations: {
+        de: {
+          consentModal: {
+            title: 'Datenschutz & Performance',
+            description:
+              'Wir nutzen Google Analytics über ein <strong>Server-Side Setup</strong>, um unsere Inhalte zu verbessern. Daten fließen erst nach Ihrer Zustimmung anonymisiert an unseren Server.',
+            acceptAllBtn: 'Alle akzeptieren',
+            acceptNecessaryBtn: 'Nur notwendige',
+            showPreferencesBtn: 'Individuell einstellen',
+            footer:
+              '<a href="/impressum">Impressum</a><a href="/datenschutz">Datenschutz</a>',
+          },
+          preferencesModal: {
+            title: 'Cookie-Einstellungen',
+            acceptAllBtn: 'Alle akzeptieren',
+            acceptNecessaryBtn: 'Nur notwendige',
+            savePreferencesBtn: 'Einstellungen speichern',
+            closeIconLabel: 'Schließen',
+            sections: [
+              {
+                title: 'Cookie-Nutzung',
+                description:
+                  'Hier können Sie steuern, welche Dienste Daten verarbeiten dürfen.',
+              },
+              {
+                title: 'Notwendig',
+                description:
+                  'Technisch erforderlich für den Betrieb der Website.',
+                linkedCategory: 'necessary',
+              },
+              {
+                title: 'Analyse',
+                description:
+                  'Hilft uns zu verstehen, wie Besucher mit der Website interagieren (via Server-Side GTM).',
+                linkedCategory: 'analytics',
+              },
+              {
+                title: 'Marketing',
+                description:
+                  'Ermöglicht die Messung von Google Ads und Meta Kampagnen.',
+                linkedCategory: 'advertisement',
+              },
+            ],
+          },
+        },
+      },
+    },
+  });
+
+  setTimeout(CookieConsent.show, 2500);
+</script>
+
+<style is:global>
+  #cc-main {
+    --cc-bg: rgba(26, 23, 23, 0.97);
+    --cc-modal-border-radius: 1rem;
+    --cc-modal-margin: 1.25rem;
+    --cc-primary-color: #009fe3;
+    --cc-secondary-color: #a0a0a0;
+    --cc-text: #f0f0f0;
+    --cc-btn-primary-bg: #009fe3;
+    --cc-btn-primary-color: #ffffff;
+    --cc-btn-primary-hover-bg: #007dba;
+    --cc-btn-secondary-bg: rgba(45, 41, 41, 0.9);
+    --cc-btn-secondary-text: #f0f0f0;
+    --cc-btn-secondary-hover-bg: rgba(255, 255, 255, 0.08);
+    --cc-separator-border-color: rgba(255, 255, 255, 0.08);
+  }
+  #cc-main .cm {
+    border: 1px solid rgba(0, 159, 227, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+  }
+  #cc-main .cm__title {
+    font-size: 1.1rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+  }
+  #cc-main .c-bn {
+    border-radius: 0.5rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 11px !important;
+    padding: 10px 20px !important;
+  }
+</style>
