@@ -8,6 +8,70 @@ import SiteFooter from '../components/SiteFooter.astro';
   title="Digitaler Partner für Kliniken & Praxen"
   description="Wir übernehmen alles Digitale für ästhetische Kliniken und Praxen – Website, Technik, Werbung und Auswertung. Aus einer Hand."
 >
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://praxismarketing.kicktemp.com/#organization",
+        "name": "Kicktemp GmbH",
+        "url": "https://praxismarketing.kicktemp.com",
+        "logo": "https://praxismarketing.kicktemp.com/favicon.svg",
+        "foundingDate": "2018",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jungfernstieg 7",
+          "addressLocality": "Hamburg",
+          "postalCode": "20354",
+          "addressCountry": "DE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "praxismarketing@kicktemp.com",
+          "contactType": "sales",
+          "availableLanguage": "German"
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 53.5507, "longitude": 9.9930 },
+          "geoRadius": "800000"
+        },
+        "description": "Kicktemp implementiert das Praxis Performance System für ästhetische Kliniken und Praxen — die datenschutzkonforme Schnittstelle zwischen Google Ads und Praxissoftware (mobi.MED, Claysen).",
+        "knowsAbout": ["Google Ads", "Praxismarketing", "ästhetische Chirurgie", "mobi.MED", "Claysen", "Server-Side Tracking"],
+        "founder": [
+          { "@type": "Person", "name": "Niels Nübel" },
+          { "@type": "Person", "name": "Stefan Wendhausen" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://praxismarketing.kicktemp.com/#service",
+        "name": "Kicktemp Praxis Performance System",
+        "provider": { "@id": "https://praxismarketing.kicktemp.com/#organization" },
+        "serviceType": "Praxismarketing",
+        "description": "Datenschutzkonforme Schnittstelle zwischen Google Ads und Praxissoftware (mobi.MED, Claysen). Verbindet digitale Werbung mit echten gebuchten Terminen für messbar mehr Patienten.",
+        "areaServed": ["DE", "AT", "CH"],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Ästhetische Chirurgen, Plastische Chirurgen, Dermatologen, Zahnärzte"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "description": "Monatliches Retainer-Modell. Erstes Gespräch kostenlos."
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://praxismarketing.kicktemp.com/#website",
+        "url": "https://praxismarketing.kicktemp.com",
+        "name": "Kicktemp Praxismarketing",
+        "publisher": { "@id": "https://praxismarketing.kicktemp.com/#organization" },
+        "inLanguage": "de-DE"
+      }
+    ]
+  })} />
 
   <SiteNav />
 

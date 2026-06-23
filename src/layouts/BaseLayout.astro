@@ -59,6 +59,8 @@ const canonical = generateCanonical(path);
       }}
     />
 
+    <slot name="head" />
+
     <!-- Consent Default (Google Consent Mode v2) — must fire before GTM -->
     <script is:inline define:vars={{ GTM_ID, SST_URL }}>
       window.dataLayer = window.dataLayer || [];
