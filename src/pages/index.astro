@@ -29,9 +29,12 @@ import SiteFooter from '../components/SiteFooter.astro';
         Alles Digitale.<br />
         <span class="text-blue">Aus einer Hand.</span>
       </h1>
-      <p class="text-white/70 text-base leading-relaxed max-w-md mx-auto mt-5 mb-10">
-        Wir übernehmen alles Digitale für ästhetische Kliniken und Praxen —
-        <strong class="text-white/95 font-semibold">Website, Technik, Werbung und Auswertung.</strong>
+      <p class="text-white/70 text-base leading-relaxed max-w-md mx-auto mt-5 mb-2">
+        Wir implementieren das <strong class="text-white/95 font-semibold">Kicktemp Praxis Performance System</strong> —
+        die datenschutzkonforme Schnittstelle zwischen Google Ads und Ihrer Praxissoftware.
+      </p>
+      <p class="text-white/50 text-xs max-w-xs mx-auto mb-10">
+        Kompatibel mit mobi.MED · Claysen · und weiteren Praxis-CRM-Systemen
       </p>
       <div class="flex flex-wrap gap-3 justify-center">
         <a
@@ -56,7 +59,7 @@ import SiteFooter from '../components/SiteFooter.astro';
     <div class="max-w-lg mx-auto flex flex-wrap justify-center gap-x-8 gap-y-3 text-center">
       {[
         { value: 'Ø 64x', label: 'ROAS Google Ads' },
-        { value: '€ 22', label: 'Ø Cost per Lead' },
+        { value: '€ 22', label: 'Ø Kosten pro Termin' },
         { value: '8+', label: 'Jahre Kicktemp' },
         { value: '100%', label: 'Fokus auf Medizin' },
       ].map((s) => (
@@ -104,9 +107,12 @@ import SiteFooter from '../components/SiteFooter.astro';
   <!-- ── SERVICES ───────────────────────────────── -->
   <section class="px-6 py-16 max-w-2xl mx-auto" id="leistungen">
     <p class="text-blue text-xs font-bold tracking-widest uppercase mb-3">Leistungen</p>
-    <h2 class="text-dark font-extrabold text-2xl sm:text-3xl tracking-tight mb-10">
-      Was wir für Sie übernehmen
+    <h2 class="text-dark font-extrabold text-2xl sm:text-3xl tracking-tight mb-3">
+      Das Praxis Performance System
     </h2>
+    <p class="text-gray-500 text-sm max-w-md mb-10 leading-relaxed">
+      Kein Baukastensystem. Wir implementieren ein vollständig integriertes System, das digitale Werbung mit echten Termindaten aus Ihrer Praxissoftware verbindet.
+    </p>
 
     <div class="grid grid-cols-2 gap-3.5">
       {[
@@ -162,7 +168,8 @@ import SiteFooter from '../components/SiteFooter.astro';
       {[
         { label: 'Ästhetische Chirurgen', highlight: true },
         { label: 'Plastische Chirurgen', highlight: true },
-        { label: 'Dermatologen (ästhetisch)', highlight: false },
+        { label: 'Dermatologen (ästhetisch)', highlight: true },
+        { label: 'Zahnärzte (Implantate · Aligner)', highlight: true },
         { label: 'Privatärztliche Kliniken', highlight: false },
         { label: 'Praxen mit eigenem Marketing', highlight: false },
       ].map((c) => (
@@ -234,7 +241,7 @@ import SiteFooter from '../components/SiteFooter.astro';
               <span class="text-white font-semibold">Ø 64x</span>
             </div>
             <div class="flex justify-between text-xs">
-              <span class="text-white/50">Cost per Lead</span>
+              <span class="text-white/50">Kosten pro Termin</span>
               <span class="text-white font-semibold">€ 22</span>
             </div>
             <div class="flex justify-between text-xs">
