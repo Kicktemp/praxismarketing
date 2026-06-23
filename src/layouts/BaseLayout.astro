@@ -39,6 +39,7 @@ const canonical = generateCanonical(path);
     <SEO
       title={metaTitle}
       description={description}
+      canonical={canonical}
       openGraph={{
         basic: {
           title: metaTitle,
@@ -52,9 +53,6 @@ const canonical = generateCanonical(path);
         meta: [
           { name: 'og:locale', content: seoConfig.locale },
           ...(robots ? [{ name: 'robots', content: robots }] : []),
-        ],
-        link: [
-          { rel: 'canonical', href: canonical },
         ],
       }}
     />
